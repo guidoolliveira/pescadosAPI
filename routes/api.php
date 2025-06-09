@@ -15,6 +15,7 @@ use App\Http\Controllers\ProfileController;
 
 // Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('viveiros', ViveiroController::class);
+    Route::delete('viveiros', [ViveiroController::class, 'destroyQuery']);
     Route::get('/index', [SiteController::class, 'index'])->name('api.index');
     Route::apiResource('produtos', ProductController::class);
     Route::apiResource('cultivos', CultivoController::class);
